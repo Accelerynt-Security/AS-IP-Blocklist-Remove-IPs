@@ -60,32 +60,41 @@ From there, click "**New registration**".
 
 ![NamedLocations_Create_App_Registration_1](Images/NamedLocations_Create_App_Registration_1.png)
 
-Select a name for your App Registration, such as "**AS-IP-Blocklist-Remove-IPs**", then click "**Register**".
+Select a name for your App Registration, such as "**Update-Named-Locations**". All else can be left as is, then click "**Register**".
 
 ![NamedLocations_Create_App_Registration_2](Images/NamedLocations_Create_App_Registration_2.png)
 
-From the application menu blade, select "**API permissions**" and then click "**Add a permission**". Click the "**Microsoft Graph**" category.
+Once the app registration is created, you will be redirected to the "**Overview**" page. Under the "**Essentials**" section, take note of the "**Application (client) ID**", as this will be needed for deployment.
 
 ![NamedLocations_Create_App_Registration_3](Images/NamedLocations_Create_App_Registration_3.png)
 
-Under "**Application permissions**", search for "**Policy**", then select the "**Policy.Read.All**" and ""**Policy.ReadWrite.ConditionalAccess**" checkboxes. Click "**Add permissions**".
+Next, you will need to add permissions for the app registration to call the [Microsoft Graph API update user endpoint](https://learn.microsoft.com/en-us/graph/api/user-update?view=graph-rest-1.0&tabs=http#permissions). From the left menu blade, click "**API permissions**" under the "**Manage**" section. Then, click "**Add a permission**".
 
 ![NamedLocations_Create_App_Registration_4](Images/NamedLocations_Create_App_Registration_4.png)
 
-In order for these permissions to be applied, admin consent must also be granted. Click the indicated "**Grant admin consent**" button on the "**API permissions**" page.
-![NamedLocations_Create_App_Registration_5_consent](Images/NamedLocations_Create_App_Registration_5_consent.png)
+From the "**Select an API**" pane, click the "**Microsoft APIs**" tab and select "**Microsoft Graph**".
 
-Navigate back to the "**Overview**" section on the menu and take note of the "**Application (client) ID**" and "**Directory (tenant) ID**, as each will be needed for the deployment of this playbook. Click "**Add a certificate or secret**".
+![Azure_AD_Disable_User_App_Registration_5](Images/Azure_AD_Disable_User_App_Registration_5.png)
 
-![NamedLocations_Create_App_Registration_5](Images/NamedLocations_Create_App_Registration_5.png)
+Under "**Application permissions**", search for "**Policy**", then select the "**Policy.Read.All**" and ""**Policy.ReadWrite.ConditionalAccess**" checkboxes. Click "**Add permissions**".
 
-Click "**New client secret"**". After adding a description and selecting an expiration date, click "**Add**".
+![Azure_AD_Disable_User_App_Registration_6](Images/Azure_AD_Disable_User_App_Registration_6.png)
 
-![NamedLocations_Create_App_Registration_6](Images/NamedLocations_Create_App_Registration_6.png)
+Admin consent will be needed before your app registration can use the assigned permissions. Click "**Grant admin consent for (name)**".
+
+![Azure_AD_Disable_User_App_Registration_7](Images/Azure_AD_Disable_User_App_Registration_7.png)
+
+Lastly, a client secret will need to be generated for the app registration. From the left menu blade, click "**Certificates & secrets**" under the "**Manage**" section. Then, click "**New client secret**".
+
+![NamedLocations_Create_App_Registration_8](Images/NamedLocations_Create_App_Registration_8.png)
+
+Enter a description and select the desired expiration date, then click "**Add**".
+
+![NamedLocations_Create_App_Registration_9](Images/NamedLocations_Create_App_Registration_9.png)
 
 Copy the generated "**Value**" and save it for the next step, [Create an Azure Key Vault Secret](https://github.com/Accelerynt-Security/AS-IP-Blocklist-Remove-IPs#create-an-azure-key-vault-secret).
 
-![NamedLocations_Create_App_Registration_7](Images/NamedLocations_Create_App_Registration_7.png)
+![NamedLocations_Create_App_Registration_10](Images/NamedLocations_Create_App_Registration_10.png)
 
 
 #### Create an Azure Key Vault Secret:
