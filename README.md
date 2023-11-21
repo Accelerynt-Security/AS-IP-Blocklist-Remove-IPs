@@ -74,15 +74,15 @@ Next, you will need to add permissions for the app registration to call the [Mic
 
 From the "**Select an API**" pane, click the "**Microsoft APIs**" tab and select "**Microsoft Graph**".
 
-![Azure_AD_Disable_User_App_Registration_5](Images/Azure_AD_Disable_User_App_Registration_5.png)
+![NamedLocations_Create_App_Registration_5](Images/NamedLocations_Create_App_Registration_5.png)
 
 Under "**Application permissions**", search for "**Policy**", then select the "**Policy.Read.All**" and ""**Policy.ReadWrite.ConditionalAccess**" checkboxes. Click "**Add permissions**".
 
-![Azure_AD_Disable_User_App_Registration_6](Images/Azure_AD_Disable_User_App_Registration_6.png)
+![NamedLocations_Create_App_Registration_6](Images/NamedLocations_Create_App_Registration_6.png)
 
 Admin consent will be needed before your app registration can use the assigned permissions. Click "**Grant admin consent for (name)**".
 
-![Azure_AD_Disable_User_App_Registration_7](Images/Azure_AD_Disable_User_App_Registration_7.png)
+![NamedLocations_Create_App_Registration_7](Images/NamedLocations_Create_App_Registration_7.png)
 
 Lastly, a client secret will need to be generated for the app registration. From the left menu blade, click "**Certificates & secrets**" under the "**Manage**" section. Then, click "**New client secret**".
 
